@@ -1,4 +1,31 @@
-a = [1,2,3,4,5,6,7,8,9,10]
-b = ['q', 'w' , 'e' , 'r' , 't' , 'y' , 'u' , 'i' , 'o' ,'p']
-print(a)
-print(b)
+import random
+import string
+
+
+
+
+koss = [random.randint(-100,100) for i in range(10)]
+
+print(koss)
+letters = string.ascii_letters
+
+list = []
+
+
+q=0
+while q != 10:
+
+    randNum = random.randrange(10)
+    randFlag = random.randrange(10)
+    word = random.choice(letters)
+
+    while randNum != randFlag:
+        randNum = random.randrange(10)
+        randFlag = random.randrange(10)
+        randLetter = random.choice(letters)
+        word += randLetter
+
+    list.append(word)
+    q += 1
+
+print(list)
